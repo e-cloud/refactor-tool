@@ -1,0 +1,36 @@
+{
+  "name": "refactor-tool",
+  "version": "0.0.0",
+  "description": "refactor-tool",
+  "main": "index.js",
+  "bin": {
+    "refactor": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "bluebird": "^3.4.6",
+    "commander": "^2.9.0",
+    "esformatter": "^0.9.6",
+    "esformatter-align": "^0.2.3",
+    "esformatter-asi": "^0.5.2",
+    "esformatter-auto-wrap": "^1.0.0",
+    "esformatter-braces": "^1.2.1",
+    "esformatter-dot-notation": "^1.3.1",
+    "esformatter-eol-last": "^1.0.0",
+    "esformatter-ignore": "^0.1.3",
+    "esformatter-literal-notation": "^1.0.1",
+    "esformatter-only-return": "^1.0.1",
+    "esformatter-parseint": "^1.0.3",
+    "esformatter-quote-props": "^2.0.0",
+    "esformatter-quotes": "^1.1.0",
+    "esformatter-spaced-lined-comment": "^2.0.1",
+    "esformatter-var-each": "^2.1.0",
+    "globby": "^6.0.0",
+    "lebab": "^2.4.0"
+  }
+}

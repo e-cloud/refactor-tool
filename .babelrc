@@ -1,0 +1,7 @@
+{
+	"presets": [
+	],
+	"plugins": [
+        "./short-circuit-to-if.js"
+	]
+}
