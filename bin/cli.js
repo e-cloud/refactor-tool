@@ -21,13 +21,13 @@ function doRefactor(pattern) {
 	})
 		.then(function (paths) {
 			if (paths.length) {
-				paths.forEach(paf => {
-					fs.readFile(paf, 'utf8', (err, data) => {
+				paths.forEach(path => {
+					fs.readFile(path, 'utf8', (err, data) => {
 						if (err) throw err
 						const newData = refactor(data)
-						fs.writeFile(paf, newData, 'utf8', (err) => {
+						fs.writeFile(path.replace(/\.js$/, '.ts'), newData, 'utf8', (err) => {
 							if (err) throw err
-							console.log(`write ${paf}`)
+							console.log(`write ${path}`)
 						})
 					})
 				})
