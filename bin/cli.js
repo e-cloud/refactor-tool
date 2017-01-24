@@ -8,14 +8,15 @@ const pkgInfo = require('../package.json')
 const refactor = require('../')
 
 program.version(pkgInfo.version)
+    .option('-t, --type [type]', 'ts or es')
 	.arguments('<pattern...>')
 	.action(function (pattern) {
-		doRefactor(pattern)
+		doRefactor(pattern, program.type)
 	})
 
 program.parse(process.argv);
 
-function doRefactor(pattern) {
+function doRefactor(pattern, type) {
 	globby(pattern, {
 		absolute: true
 	})
@@ -25,7 +26,7 @@ function doRefactor(pattern) {
 					fs.readFile(path, 'utf8', (err, data) => {
 						if (err) throw err
 						const newData = refactor(data)
-						fs.writeFile(path.replace(/\.js$/, '.ts'), newData, 'utf8', (err) => {
+						fs.writeFile(path.replace(/\.js$/, `.${type}`), newData, 'utf8', (err) => {
 							if (err) throw err
 							console.log(`write ${path}`)
 						})
