@@ -31,6 +31,6 @@
     "esformatter-spaced-lined-comment": "^2.0.1",
     "esformatter-var-each": "^2.1.0",
     "globby": "^6.0.0",
-    "lebab": "^2.4.0"
+    "lebab": "file:../../github/lebab"
   }
 }

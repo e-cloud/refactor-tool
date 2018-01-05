@@ -24,7 +24,7 @@ function tranformCode(src) {
 
 function tranform5To6(src) {
 	return lebab.transform(src, [
-		'arrow',
+		//'arrow',
 		'for-of',
 		'arg-rest',
 		'arg-spread',
